@@ -1,8 +1,9 @@
 
 <template lang="jade">
 
-input( v-if="!multiple" type="file" @change="onChange" )
-input( v-if="multiple" type="file" @change="onChange" multiple)
+//- input( v-if="!multiple" type="file" @change="onChange" )
+//- input( v-if="multiple" type="file" @change="onChange" )
+input( type="file" @change="onChange" v-bind:multiple="multiple" )
 
 </template>
 
@@ -32,12 +33,6 @@ input( v-if="multiple" type="file" @change="onChange" multiple)
       }
     },
 
-    data(){
-      return{
-        files: []
-      }
-    },
-
     methods: {
       onChange(e){
 
@@ -45,35 +40,43 @@ input( v-if="multiple" type="file" @change="onChange" multiple)
         let files = e.target.files;
 
         // Process each file
+        var allFiles = []
         for (var i = 0; i < files.length; i++) {
-          this.processFile(files[i])
-        }
 
-        // Pass the files info~
-        this.done(this.files)
+          let file = files[i]
+
+          // Make new FileReader
+          let reader = new FileReader()
+
+          // Convert the file to base64 text
+          reader.readAsDataURL(file)
+
+          // on reader load somthing...
+          reader.onload = () => {
+
+            // Make a fileInfo Object
+            let fileInfo = {
+              name: file.name,
+              type: file.type,
+              size: Math.round(file.size / 1000)+' kB',
+              base64: reader.result
+            }
+
+            // Push it to the state
+            allFiles.push(fileInfo)
+
+            // If all files have been proceed
+            if(allFiles.length == files.length){
+              // Apply Callback function
+              if(this.multiple) this.done(allFiles)
+              else this.done(allFiles[0])
+            }
+
+          } // reader.onload
+
+        } // for
 
       }, // onChange()
-
-      processFile(file){
-        let reader = new FileReader()
-
-        // Convert the file to base64 text
-        reader.readAsDataURL(file)
-
-        // on reader load somthing...
-        reader.onload = () => {
-          // Make a fileInfo Object
-          let fileInfo = {
-            name: file.name,
-            type: file.type,
-            size: Math.round(file.size / 1000)+' kB',
-            base64: reader.result
-          }
-          // Push it to the state
-          this.files.push(fileInfo)
-        }
-
-      } // processFile()
 
     }
   };
