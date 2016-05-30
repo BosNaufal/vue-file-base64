@@ -1,6 +1,6 @@
 {
   "name": "vue-file-base64",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vue Component for Convert File to base64",
   "main": "./src/js/components/vue-file-base64.vue",
   "scripts": {
