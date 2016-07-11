@@ -15,9 +15,9 @@ npm install vue-file-base64
 
 ## Import Module
 ```javascript
-import fileBase64 from 'vue-file-base64.vue'
+import fileBase64 from 'vue-file-base64'
 // Or
-var fileBase64 = require('vue-file-base64.vue');
+var fileBase64 = require('vue-file-base64');
 ```
 
 ## Usage
@@ -34,7 +34,7 @@ var fileBase64 = require('vue-file-base64.vue');
 
 <script>
 
-  import fileBase64 from './vue-file-base64.vue';
+  import fileBase64 from 'vue-file-base64';
 
   export default {
 
