@@ -59,7 +59,8 @@ input( type="file" @change="onChange" v-bind:multiple="multiple" )
               name: file.name,
               type: file.type,
               size: Math.round(file.size / 1000)+' kB',
-              base64: reader.result
+              base64: reader.result,
+              file: file
             }
 
             // Push it to the state
