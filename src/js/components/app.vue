@@ -1,29 +1,28 @@
 
-<template lang="jade">
+<template>
+  <div align="center">
 
-div
-  h1.text-center Vue File to Base64 Converter
+    <h1>Vue, File To Base64 Converter</h1>
+    <p>*) Try To Upload Some Image~</p>
 
-  .text-center.mt-25
-    p.text-center *) Try To Upload Some Image~
-    file-base64( v-bind:multiple="true" v-bind:done="getFiles" )
+    <file-base64 :multiple="true" :done="getFiles"></file-base64>
 
-  div.text-center
-    img(
-      v-bind:src="img.base64"
-      v-for="img in files"
-    )
+    <div class="text-center">
+      <img src="" alt="" :src="img.base64" v-for="img in files">
+    </div>
 
-  div( v-if="files.length != 0" )
-    h3.text-center.mt-25 Callback Object
-    .pre-container
-      pre {{ files | json 2 }}
+    <div v-if="files.length != 0">
+      <h3 class="text-center mt-25">Callback Object</h3>
+      <div class="pre-container" align="left">
+        <pre>{{ files }}</pre>
+      </div>
+    </div>
+
+  </div>
 
 </template>
 
 <script>
-
-  require('../../sass/main.sass')
 
   import fileBase64 from './vue-file-base64.vue';
 

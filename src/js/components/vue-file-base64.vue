@@ -1,10 +1,6 @@
 
-<template lang="jade">
-
-//- input( v-if="!multiple" type="file" @change="onChange" )
-//- input( v-if="multiple" type="file" @change="onChange" )
-input( type="file" @change="onChange" v-bind:multiple="multiple" )
-
+<template>
+  <input type="file" @change="onChange" :multiple="multiple" />
 </template>
 
 
