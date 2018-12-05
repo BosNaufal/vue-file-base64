@@ -1,6 +1,6 @@
 
 <template>
-  <input type="file" @change="onChange" :multiple="multiple" />
+  <input type="file" @input="onInput" :multiple="multiple" />
 </template>
 
 
@@ -30,7 +30,7 @@
     },
 
     methods: {
-      onChange(e){
+      onInput(e){
 
         // get the files
         let files = e.target.files;
