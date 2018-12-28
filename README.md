@@ -57,15 +57,8 @@ Is your component support multiple file?
 #### done (Function)
 Callback Function When File has done proceed
 
-
 ## Thank You for Making this useful~
 
-## Let's talk about some projects with me
-Just Contact Me At:
-- Email: [bosnaufalemail@gmail.com](mailto:bosnaufalemail@gmail.com)
-- Skype Id: bosnaufal254
-- twitter: [@BosNaufal](https://twitter.com/BosNaufal)
-
 ## License
+This package is based on the [vue-file-base64](https://github.com/BosNaufal/vue-file-base64) package by Naufal Rabbani.
 [MIT](http://opensource.org/licenses/MIT)
-Copyright (c) 2016 - forever Naufal Rabbani
