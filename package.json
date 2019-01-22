@@ -2,7 +2,7 @@
   "name": "@thijsvdanker/vue-file-base64",
   "version": "1.1.0",
   "description": "Vue Component to convert file to base64",
-  "main": "dist/vue-file-base64.js",
+  "main": "dist/main.js",
   "scripts": {
     "dev": "webpack-dev-server --progress --config build/webpack.config.dev.js",
     "prod": "webpack --config build/webpack.config.prod.js",
