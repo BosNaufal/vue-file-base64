@@ -1,4 +1,6 @@
 # vue file base64
+This package is based on the [vue-file-base64](https://github.com/BosNaufal/vue-file-base64) package by Naufal Rabbani.
+
 [Vue](http://vuejs.org) Component for Converting Files to base64. It's based on [Dev Mozilla Website](https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsDataURL)
 
 [DEMO](https://rawgit.com/BosNaufal/vue-file-base64/master/index.html)
@@ -57,15 +59,9 @@ Is your component support multiple file?
 #### done (Function)
 Callback Function When File has done proceed
 
-
 ## Thank You for Making this useful~
 
-## Let's talk about some projects with me
-Just Contact Me At:
-- Email: [bosnaufalemail@gmail.com](mailto:bosnaufalemail@gmail.com)
-- Skype Id: bosnaufal254
-- twitter: [@BosNaufal](https://twitter.com/BosNaufal)
-
 ## License
-[MIT](http://opensource.org/licenses/MIT)
-Copyright (c) 2016 - forever Naufal Rabbani
+This package is based on the [vue-file-base64](https://github.com/BosNaufal/vue-file-base64) package by Naufal Rabbani.
+
+It is licensed as [MIT](http://opensource.org/licenses/MIT)
